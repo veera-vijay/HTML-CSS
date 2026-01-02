@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deva Audio & Sound Service</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(270deg,#0f2027,#203a43,#2c5364);
+    background-size: 600% 600%;
+    animation: bgMove 15s ease infinite;
+    color:#fff;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:40px 15px;
+}
+
+.logo{
+    font-size:2.4rem;
+    font-weight:700;
+    font-style:italic;
+     color:#ffcc00;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.05)}
+    100%{transform:scale(1)}
+}
+
+header p{
+    font-size:1rem;
+    opacity:0.9;
+}
+
+/* SECTION */
+.section{
+    padding:30px 15px;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#ffcc00;
+}
+
+/* SERVICE CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+    text-align:center;
+    font-size:1rem;
+}
+
+/* PRICE LIST */
+.table{
+    background:rgba(255,255,255,0.15);
+    border-radius:15px;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 15px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.row:last-child{border-bottom:none}
+
+/* BOOKING FORM */
+form{
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:15px;
+}
+
+form input, form select, form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+form button{
+    width:100%;
+    padding:12px;
+    background:#ffcc00;
+    color:#000;
+    font-weight:600;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+form button:hover{
+    background:#fff;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+    padding:25px 15px;
+}
+
+.contact a{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    background:#25D366;
+    color:#fff;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:15px;
+    font-size:0.85rem;
+    background:rgba(0,0,0,0.4);
+}
+
+@media(min-width:768px){
+    .logo{font-size:3rem;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎵 Deva Audio & Sound Service</div>
+    <p>Khezhakollai – Professional Event Setup</p>
+</header>
+
+<!-- SERVICES -->
+<section class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+       <div class="card">
+    <img src="chair.jpg " alt="Event Chairs">
+    <h3>Chairs</h3>
+</div>
+
+   <div class="card">
+    <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=800&q=80" alt="Event Tables">
+    <h3>Tables</h3>
+</div>
+
+
+
+        <div class="card">
+    <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=800&q=80">
+    <h3>Microphones</h3>
+</div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d">
+            <h3>Speakers</h3>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93">
+            <h3>Lighting</h3>
+        </div>
+    </div>
+</section>
+
+<!-- PRICE -->
+<section class="section">
+    <h2>Rent Price List</h2>
+    <div class="table">
+        <div class="row"><span>Chair (1)</span><span>₹30</span></div>
+        <div class="row"><span>Table (1)</span><span>₹50</span></div>
+        <div class="row"><span>Microphone</span><span>₹300</span></div>
+        <div class="row"><span>Speaker Set</span><span>₹1500</span></div>
+        <div class="row"><span>Lighting Set</span><span>₹2000</span></div>
+    </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="section">
+    <h2>Book Your Event</h2>
+    <form onsubmit="bookNow(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Mobile Number" required>
+        <input type="date" required>
+        <select required>
+            <option value="">Select Service</option>
+            <option>Sound System</option>
+            <option>Lighting</option>
+            <option>Chair & Table</option>
+            <option>Full Event Setup</option>
+        </select>
+        <textarea rows="3" placeholder="Event Details"></textarea>
+        <button type="submit">Submit Booking</button>
+    </form>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2>Contact Us</h2>
+    <a href="tel:9876543210">📞 Call Now</a>
+</section>
+
+<footer>
+    © 2025 Deva Audio & Sound Service – Khezhakollai
+</footer>
+
+<script>
+function bookNow(e){
+    e.preventDefault();
+    alert("Thank you! We will contact you soon 📞");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<style>
+body{
+    overflow: hidden;
+}
+.car
+{
+    
+    width: 300px;
+    margin-top: 550px;
+    animation-name: carmoving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+  
+}
+@keyframes carmoving {
+    from{transform: translateX(0px);}
+    to{transform: translateX(1500PX)}
+}
+   
+
+.cloud1{
+   
+   margin-bottom: 500px;
+    
+   animation-name: cloudmoving;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+} 
+   
+
+    @keyframes cloudmoving {
+    from { transform: translateX(1000px); }   
+    to   { transform: translateX(-1600px); }  
+}
+
+
+
+.car:hover {
+    animation-play-state: paused;
+}
+ .cloud1:hover {
+    animation-play-state: paused;
+}
+/**
+.car1
+{
+    position: absolute;
+    width: 300px;
+    margin-top: 550px;
+    
+    animation-name: carmoving1;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    
+  
+}
+@keyframes carmoving1 {
+    from{transform: translateX(1px);}
+    to{transform: translateX(1600PX)}
+} **/
+    
+   
+</style>
+<body>
+    
+    <div class="container">
+        <img src="car.png" alt="car" class="car" >
+     
+        <img src="cloud.webp" class="cloud1"> 
+    </div>
+
+  
+</body>
+
+</html>

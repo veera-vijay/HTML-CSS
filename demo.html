@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      min-height: 100vh;
+    }
+
+    .card {
+      background-color: #fff3f3;  /* light pink background */
+      border-radius: 15px;
+    }
+
+    h3 {
+      color: #6a11cb; /* purple heading */
+      font-weight: bold;
+    }
+
+    label {
+      color: #2575fc; /* blue labels */
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background-color: #6a11cb;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #2575fc;
+    }
+
+    .btn-secondary {
+      background-color: #ff6b6b;
+      border: none;
+    }
+
+    .btn-secondary:hover {
+      background-color: #ff4757;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card p-4 shadow" style="width:400px;">
+
+    <h3 class="text-center mb-4">Register</h3>
+
+    <form>
+      <!-- Name -->
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter name">
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="Enter email">
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" placeholder="Enter password">
+      </div>
+
+      <!-- Gender -->
+      <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <select class="form-select">
+          <option selected disabled>Select gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <!-- Course -->
+      <div class="mb-3">
+        <label class="form-label">Course</label>
+        <select class="form-select">
+          <option selected disabled>Select course</option>
+          <option>Web Development</option>
+          <option>Python</option>
+          <option>Java</option>
+        </select>
+      </div>
+
+      <!-- Buttons -->
+      <button type="submit" class="btn btn-primary w-100 mb-2">Submit</button>
+      <button type="reset" class="btn btn-secondary w-100">Reset</button>
+    </form>
+
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+    <h1>GRID EXAMPLE</h1>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">login</a></li>
+           
+            <li><a href="#">register</a></li>
+             <li><a href="#">logout</a></li>
+        </ul>
+    </aside>
+    <main class="main">
+        <center>
+        <p><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam impedit nostrum libero, perferendis obcaecati sunt dolorum corrupti vitae deleniti laborum veritatis eveniet quisquam nihil cumque, magnam necessitatibus dolore. Quae deserunt, omnis sunt deleniti debitis dolorem perspiciatis iusto provident modi eius consequuntur consectetur illum doloremque commodi! Doloribus, eligendi nulla saepe impedit, voluptatem a, totam ipsum aperiam recusandae dolorum at dolores nemo. Asperiores quisquam natus, consectetur quibusdam a provident neque ipsa tempora totam accusantium eum magni modi eaque ratione harum deserunt quae inventore repudiandae commodi? Libero doloribus nisi necessitatibus explicabo excepturi ad velit ratione laudantium, impedit odit, esse neque inventore aliquam?
+
+        </p></i>
+
+        <p style="color: black;"><i> <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, fugiat qui. Voluptatem, aspernatur. Atque, quaerat vel natus dolore ipsum odit? Delectus autem odit, veniam, tempora, velit dolore consectetur nisi nobis voluptatem voluptatum exercitationem! Sapiente labore, veniam similique, totam perferendis nemo provident sint fuga at consectetur suscipit quidem nostrum minus ipsum.
+
+      </i></b></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit blanditiis libero reprehenderit illum earum voluptas quaerat doloribus incidunt optio praesentium, sapiente natus distinctio ipsa non commodi adipisci officiis numquam! Corporis maiores eaque ea, nisi saepe quia, tempore harum cum deleniti architecto vel consectetur, doloremque dignissimos inventore unde praesentium nihil. Voluptas quo, veniam sit, voluptatem dicta nisi obcaecati dolor laboriosam officia, quam esse! Quia consequatur maiores enim tempora consequuntur quidem voluptatibus delectus incidunt, aut vitae sed possimus reprehenderit vero rem repudiandae cupiditate velit quas error accusantium, voluptates dolores perferendis neque minima ad! Esse perspiciatis, natus ea fugiat impedit minus cum provident. Amet nostrum qui cumque dolor consequuntur laborum ipsa quis voluptates alias excepturi labore eaque eius totam, dicta natus, necessitatibus similique repudiandae veniam porro eum hic atque. Ducimus vitae, omnis perferendis corrupti rem eligendi molestiae fugiat? Repellat veniam sit incidunt minima ratione, error est hic quas similique saepe expedita sequi in.
+
+            <p style="color:darkmagenta;"><i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia nihil facere eius. Tenetur, inventore? Sequi, sed fugit, tempora dolorem ipsam, eaque quas quam quisquam illo quae repellat. Expedita debitis, tempora sed omnis quia fugiat corrupti totam neque qui officiis nisi consequuntur, inventore voluptate nulla voluptatum, optio odio voluptas consequatur amet perferendis! Ab quos aperiam minima odio officia placeat quae itaque provident deserunt odit temporibus nulla recusandae quidem reprehenderit dolores eos sed aliquam eum, magnam rerum magni? Nesciunt doloribus, earum rerum eaque porro vero veniam labore fuga, soluta ratione, quam perferendis. Odit perspiciatis nam saepe amet quo minima. Libero, suscipit molestiae.
+
+            </i></p>
+        </i></p>
+        </center>
+    </main>
+    
+    <footer class="footer">
+         <p>Contact: example@gmail.com | 9876543210</p>
+    </footer>
+</div>
+
+
+</body>
+
+
+<style>
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    height: 100vh;
+}
+
+
+.header{
+    grid-area: header;
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: aqua;
+    padding: 20px;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar li{
+    margin: 15px 0;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.sidebar a:hover{
+    text-decoration: underline;
+    text-shadow: 2px 2px 8px green;
+}
+
+.main{
+    grid-area: main;
+    background-color: cornflowerblue;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+@media (max-width: 768px){
+
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .sidebar ul{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .sidebar li{
+        margin: 0;
+    }
+}
+
+</style>
+</html>
